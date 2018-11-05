@@ -74,6 +74,7 @@ public class MoonYueHttpServer {
                     out.println("Content-Type: image/jpeg");
                     out.println("Content-Length: " + array.length);
                     out.println("");
+                    out.flush();
                     socket.getOutputStream().write(array, 0, array.length);
                 }else{
                     br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath)));
