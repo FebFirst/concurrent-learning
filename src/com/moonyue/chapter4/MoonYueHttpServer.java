@@ -86,8 +86,8 @@ public class MoonYueHttpServer {
                     while ((line = br.readLine()) != null){
                         out.println(line);
                     }
+                    out.flush();
                 }
-                out.flush();
             }catch (Exception e){
                 out.println("HTTP/1.1 500");
                 out.println("");
